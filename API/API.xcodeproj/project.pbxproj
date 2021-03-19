@@ -15,6 +15,7 @@
 		3561616325FF9BBB00CE23CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3561616125FF9BBB00CE23CF /* LaunchScreen.storyboard */; };
 		3561616E25FF9BBB00CE23CF /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561616D25FF9BBB00CE23CF /* APITests.swift */; };
 		3561617925FF9BBB00CE23CF /* APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561617825FF9BBB00CE23CF /* APIUITests.swift */; };
+		35DEA03D2604E60000CE670F /* DrawSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DEA03C2604E60000CE670F /* DrawSquare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3561617425FF9BBB00CE23CF /* APIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3561617825FF9BBB00CE23CF /* APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUITests.swift; sourceTree = "<group>"; };
 		3561617A25FF9BBB00CE23CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35DEA03C2604E60000CE670F /* DrawSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawSquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				3561615825FF9BB900CE23CF /* SceneDelegate.swift */,
 				3561615A25FF9BB900CE23CF /* ViewController.swift */,
 				3561615C25FF9BB900CE23CF /* Main.storyboard */,
+				35DEA03C2604E60000CE670F /* DrawSquare.swift */,
 				3561615F25FF9BBB00CE23CF /* Assets.xcassets */,
 				3561616125FF9BBB00CE23CF /* LaunchScreen.storyboard */,
 				3561616425FF9BBB00CE23CF /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				3561615B25FF9BB900CE23CF /* ViewController.swift in Sources */,
 				3561615725FF9BB900CE23CF /* AppDelegate.swift in Sources */,
+				35DEA03D2604E60000CE670F /* DrawSquare.swift in Sources */,
 				3561615925FF9BB900CE23CF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
