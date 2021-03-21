@@ -11,9 +11,12 @@ import CoreMotion
 class ViewController: UIViewController {
     
     @IBOutlet weak var drawSquare : DrawSquare!
+    @IBOutlet weak var movement : UILabel!
+    @IBOutlet weak var drawY : UILabel!
+
     
     var motionManager: CMMotionManager!
-    var data : CMGyroData!
+    var data : CMAccelerometerData!
 
     var ranOnce:Bool = false
     override func viewDidLoad() {
@@ -21,20 +24,23 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         motionManager = CMMotionManager()
         motionManager.gyroUpdateInterval = 0.5
-        motionManager.startGyroUpdates(to: OperationQueue.current!) {(dataIn, error) in
-            if let actualData = dataIn{
-                self.data = actualData
-            }
-            if(!self.ranOnce){
-                let displayLink = CADisplayLink(target: self, selector: #selector(self.update))
-                displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
-                self.ranOnce = true
-            }
+        motionManager.accelerometerUpdateInterval = 0.5
+        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) {(dataIn, error) in
+        if let actualData = dataIn{
+            self.data = actualData
         }
+        if(!self.ranOnce){
+            let displayLink = CADisplayLink(target: self, selector: #selector(self.update))
+            displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
+            self.ranOnce = true
+        }
+    }
     }
     
     @objc func update(){
         drawSquare.update(data: data)
+        movement.text = String(drawSquare.movement)
+        drawY.text = String(drawSquare.drawY)
     }
 }
 
