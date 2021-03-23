@@ -65,12 +65,12 @@ class DrawSquare: UIView {
         if(drawX < leftEdge || drawX + 40 > rightEdge){
             dx = -dx
         }
-        if(drawY < bottomEdge - 200){
-            drawY = bottomEdge - 200
+        if(drawY < bottomEdge - 250){
+            drawY = bottomEdge - 250
             canMove = false
         }
-        else if (drawY > bottomEdge - 40){
-            drawY = bottomEdge - 40
+        else if (drawY > bottomEdge - 50){
+            drawY = bottomEdge - 50
             canMove = true
         }
         

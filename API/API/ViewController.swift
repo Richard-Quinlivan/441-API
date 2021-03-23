@@ -28,11 +28,8 @@ class ViewController: UIViewController {
             if let actualData = dataIn{
                 self.data = actualData
             }
-//            if(!self.ranOnce){
-                let displayLink = CADisplayLink(target: self, selector: #selector(self.update))
-                displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
-//                self.ranOnce = true
-//            }
+            let displayLink = CADisplayLink(target: self, selector: #selector(self.update))
+            displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
         }
     }
     
